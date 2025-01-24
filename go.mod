@@ -1,4 +1,4 @@
-module github.com/K-Link-Tech/go-env-loader
+module github.com/YeMyoAung/go-env-loader
 
 go 1.23.3
 
