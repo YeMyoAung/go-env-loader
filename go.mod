@@ -1,4 +1,4 @@
-module github.com/YeMyoAung/go-env-loader
+module github.com/YeMyoAung/goenv
 
 go 1.23.3
 

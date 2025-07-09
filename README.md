@@ -5,7 +5,7 @@ A simple Go package to load environment variables from a `.env` file or the curr
 ## Installation
 
 ```
-go get github.com/yemyoaung/go-env-loader
+go get github.com/YeMyoAung/goenv
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ go get github.com/yemyoaung/go-env-loader
 ### 1. Define your config struct
 
 ```go
-import "github.com/yemyoaung/go-env-loader"
+import "github.com/YeMyoAung/goenv"
 
 type Config struct {
     Name  string `json:"name" validate:"required"`
@@ -26,7 +26,7 @@ type Config struct {
 ### 2. Load from environment variables
 
 ```go
-config, err := go_env_loader.NewGoEnvLoader[Config](nil)
+config, err := goenv.NewGoEnv[Config](nil)
 if err != nil {
     // handle error
 }
@@ -36,10 +36,10 @@ fmt.Println(config.Value.Name)
 ### 3. Load from a .env file
 
 ```go
-args := &go_env_loader.GoEnvLoaderArgs{
+args := &goenv.Args{
     FileName: ".env",
 }
-config, err := go_env_loader.NewGoEnvLoader[Config](args)
+config, err := goenv.NewGoEnv[Config](args)
 if err != nil {
     // handle error
 }
